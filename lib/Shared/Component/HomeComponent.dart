@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:suqle_app/Shared/Constant/constant.dart';
+import 'package:suqle_app/Shared/Constant/myColors.dart';
 
 
 //Category Component____________________________________________________________

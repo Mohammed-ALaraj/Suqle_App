@@ -1,9 +1,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:suqle_app/Shared/Component/HomeComponent.dart';
-import 'package:suqle_app/Shared/Constant/constant.dart';
+import 'package:suqle_app/Shared/Constant/myColors.dart';
 
-import '../../Navigate/Drawer/DrawerScreen.dart';
+import '../../../Navigate/Drawer/DrawerScreen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -55,6 +55,7 @@ class _HomeScreenState extends State<HomeScreen> {
           padding: EdgeInsets.all(10),
           child: Column(
             children: [
+              
 //First section (Time && Tax)___________________________________________________
               Container(
                 padding: EdgeInsets.symmetric(vertical: 10),
@@ -81,8 +82,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ],
                 ),
-
-//Second section (Search)
               ),
 
 //Second section (Search)_______________________________________________________
@@ -156,22 +155,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
 
-              Container(
-                height: 200,
-                padding: EdgeInsets.all(10),
-                child: GridView.count(
-                  scrollDirection: Axis.horizontal,
-                  shrinkWrap: true,
-                  crossAxisCount: 1,
-                  mainAxisSpacing: 15,
-                  childAspectRatio: 1.35,
-                  children: [
-                    Post(img: AssetImage("assets/images/cocacola.png"), title: "CokaCola",prise: "10\$"),
-                    Post(img: AssetImage("assets/images/cocacola.png"), title: "CokaCola",prise: "10\$"),
-                    Post(img: AssetImage("assets/images/frut.png"), title: "CokaCola",prise: "10\$"),
-                  ],
-                ),
-              ),
               Container(
                 height: 200,
                 padding: EdgeInsets.all(10),

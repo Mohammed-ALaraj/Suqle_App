@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:suqle_app/Shared/Constant/constant.dart';
+import 'package:suqle_app/Shared/Constant/myColors.dart';
 
 
 class DrawerScreen extends StatefulWidget {
