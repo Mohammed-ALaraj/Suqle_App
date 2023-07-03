@@ -5,8 +5,10 @@ abstract class HomeScreenCubitState {}
 
 class HomeScreenCubitInitial extends HomeScreenCubitState {}
 
+
 class CategoriesLoaded extends HomeScreenCubitState{
-  final List<Category> categories;
+  final List<dynamic> categories;
   CategoriesLoaded(this.categories);
+
 }
 
