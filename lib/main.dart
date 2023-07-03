@@ -1,20 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:suqle_app/app_router.dart';
 
 import 'Presentation/Screen/Splash_screen/Splash_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(SuqleApp(appRouter: AppRouter(),));
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class SuqleApp extends StatelessWidget {
 
-  // This widget is the root of your application.
+  final AppRouter appRouter;
+
+  const SuqleApp({super.key,  required this.appRouter});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      onGenerateRoute: appRouter.generateRout,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),

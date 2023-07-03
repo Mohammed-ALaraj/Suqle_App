@@ -1,9 +1,9 @@
 class Categories {
-  late int categorieName;
+  late int categoryName;
   late String image;
 
-  Categories.fromJson(Map<String, dynamic> json) {
-    categorieName = json["cateName"];
+  Categories.fromJson(Map<String , dynamic> json) {
+    categoryName = json["cateName"];
     image = json["img"];
   }
 }

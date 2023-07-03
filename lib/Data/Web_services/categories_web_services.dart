@@ -2,10 +2,10 @@ import 'package:dio/dio.dart';
 
 import '../../Shared/Constant/strings.dart';
 
-class CategoriesWebSetvices {
+class CategoriesWebServices {
   late Dio dio;
 
-  CategoriesWebSetvices() {
+  CategoriesWebServices() {
     BaseOptions options = BaseOptions(
       baseUrl: baseUrl,
       receiveDataWhenStatusError: true,
