@@ -6,7 +6,7 @@ class CategoriesRepository {
 
   CategoriesRepository(this.categoriesWebServices);
 
-  Future<List<dynamic>> getAllCategories() async {
+  Future <List<dynamic>> getAllCategories() async {
     final categories = await categoriesWebServices.getAllCategories();
     return categories.map((category) => Categories.fromJson(category)).toList();
   }

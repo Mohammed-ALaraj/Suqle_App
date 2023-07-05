@@ -4,12 +4,12 @@ import 'package:meta/meta.dart';
 import '../../Data/Repository/categories_repository.dart';
 part 'home_screen_cubit_state.dart';
 
-class HomeScreenCubitCubit extends Cubit<HomeScreenCubitState> {
+class CategoriesCubit extends Cubit<HomeScreenCubitState> {
   final CategoriesRepository categoriesRepository;
 
   late List<dynamic> categories;
 
-  HomeScreenCubitCubit(this.categoriesRepository)
+  CategoriesCubit(this.categoriesRepository)
       : super(HomeScreenCubitInitial());
 
   List<dynamic>? getAllCategories() {

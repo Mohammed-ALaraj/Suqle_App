@@ -1,5 +1,8 @@
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:suqle_app/Business_Logic/cubit/home_screen_cubit_cubit.dart';
 import 'package:suqle_app/Shared/Component/HomeComponent.dart';
 import 'package:suqle_app/Shared/Constant/myColors.dart';
 
@@ -13,6 +16,15 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+
+  List<Category>? allCategories;
+
+  @override
+  void initState() {
+    super.initState();
+    allCategories = BlocProvider.of<CategoriesCubit>(context).getAllCategories()?.cast<Category>();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

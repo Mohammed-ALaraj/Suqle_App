@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:flutter/foundation.dart';
 
 import '../../Shared/Constant/strings.dart';
 
@@ -18,7 +19,7 @@ class CategoriesWebServices {
 
   Future<List<dynamic>> getAllCategories() async {
     try {
-      Response response = await dio.get("categoris");
+      Response response = await dio.get("categoris");//الكلمة الي بعد  Base URL
       print(response.data.toString());
       return response.data;
     } catch (error) {
