@@ -25,6 +25,28 @@ class _HomeScreenState extends State<HomeScreen> {
     allCategories = BlocProvider.of<CategoriesCubit>(context).getAllCategories()?.cast<Category>();
   }
 
+  Widget buildBlocWidget(){
+    return BlocBuilder<CategoriesCubit,HomeScreenCubitState>(
+        builder:(context, state){
+          if(state is CategoriesLoaded){
+            allCategories = (state).categories.cast<Category>();
+            //TODO : STOP HERE
+            return buildLoadadListWidget();
+          }
+          else{
+            return showLoadingIndicator();
+          }
+        } );
+  }
+//loading function
+  Widget showLoadingIndicator(){
+    return Center(
+      child: CircularProgressIndicator(
+        color: Colors.red,
+      ),
+    )
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -4,7 +4,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:suqle_app/Business_Logic/cubit/home_screen_cubit_cubit.dart';
 import 'package:suqle_app/Data/Repository/categories_repository.dart';
 import 'package:suqle_app/Data/Web_services/categories_web_services.dart';
-import 'package:suqle_app/Data/models/categories.dart';
 import 'package:suqle_app/Presentation/Screen/Home_screen/Home_screen.dart';
 import 'package:suqle_app/Presentation/Screen/Splash_screen/Splash_screen.dart';
 
